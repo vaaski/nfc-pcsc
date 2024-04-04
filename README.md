@@ -1,7 +1,7 @@
 # nfc-pcsc
 
 [![npm](https://img.shields.io/npm/v/nfc-pcsc.svg)](https://www.npmjs.com/package/nfc-pcsc)
-[![build status](https://img.shields.io/travis/pokusew/nfc-pcsc/master.svg)](https://travis-ci.org/pokusew/nfc-pcsc)
+[![build status](https://img.shields.io/github/actions/workflow/status/pokusew/nfc-pcsc/ci.yml?logo=github)](https://github.com/pokusew/nfc-pcsc/actions/workflows/ci.yml)
 [![nfc-pcsc channel on discord](https://img.shields.io/badge/discord-join%20chat-61dafb.svg)](https://discord.gg/bg3yazg)
 
 Easy **reading and writing NFC tags and cards** in Node.js
@@ -103,7 +103,7 @@ When a NFC tag (card) is attached to the reader, the following is done:
 
 1. it tries to find out the standard of card (`TAG_ISO_14443_3` or `TAG_ISO_14443_4`)
 
-2. it will connect to the card, so any other card specific commands could be send
+2. it will connect to the card, so any other card specific commands could be sent
 
 3. handling of card
 	
@@ -352,7 +352,7 @@ Babel is used under the hood to transpile features, that are not supported in **
 
 ### Which Node.js versions are supported?
 
-nfc-pcsc officially supports the following Node.js versions: **8.x, 9.x, 10.x, 11.x, 12.x, 13.x**.
+nfc-pcsc officially supports the following Node.js versions: **8.x, 9.x, 10.x, 11.x, 12.x, 13.x, 14.x, 16.x, 18.x, 20.x**.
 
 ### How do I require/import this library?
 
@@ -401,7 +401,7 @@ import { NFC } from 'nfc-pcsc';
 const { NFC } = require('nfc-pcsc');
 ```
 
-Take a a look at [How do I require/import this library?](#how-do-i-requireimport-this-library) section for more info.
+Take a look at [How do I require/import this library?](#how-do-i-requireimport-this-library) section for more info.
 
 > **Note**, that `const NFC = require('nfc-pcsc');` or `import NFC from 'nfc-pcsc'` (NFC without brackets) won't work, because there is no default export.  
 It was removed for non-standard behaviour of ES6 modules in ES5 env (see [#12](https://github.com/pokusew/nfc-pcsc/issues/12) and [v0.6.0 release changelog](https://github.com/pokusew/nfc-pcsc/releases/tag/v0.6.0))
